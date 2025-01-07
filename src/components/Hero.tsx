@@ -1,11 +1,9 @@
-
 "use client";
-import React from 'react';
-import Image from 'next/image';
+
+import Image from "next/image";
 import Typewriter from "typewriter-effect";
-import Link from 'next/link';
+import Link from "next/link";
 import { motion } from "framer-motion";
-import dynamic from 'next/dynamic';
 
 const Hero = () => {
   return (
@@ -19,21 +17,23 @@ const Hero = () => {
             transition={{ duration: 1 }}
           >
             <p className="text-green-800 text-5xl lg:inline-block">
-              {`I'm`} <br />
+              I&apos;m <br />
               <Typewriter
                 options={{
-                  strings: ["Frontend Web Developer "],
+                  strings: ["Frontend Web Developer"],
                   autoStart: true,
                   loop: true,
                   delay: 50,
-                  deleteSpeed: 50
+                  deleteSpeed: 50,
                 }}
               />
             </p>
           </motion.h1>
-          <div className='w-[100px] h-[5px] bg-blue-500 mb-6'></div>
+          <div className="w-[100px] h-[5px] bg-blue-500 mb-6"></div>
           <p className="mb-8 leading-relaxed text-black text-[1.3rem]">
-            Experienced Frontend Web Developer | Expert in Typescript, JavaScript, Node.js, React.js, Next.js, HTML, CSS | Participant in Piaic and Governor Initiative of Artificial Intelligence
+            Experienced Frontend Web Developer | Expert in Typescript,
+            JavaScript, Node.js, React.js, Next.js, HTML, CSS | Participant in
+            Piaic and Governor Initiative of Artificial Intelligence
           </p>
           <div className="flex justify-center">
             <Link href="#Contact">
@@ -58,14 +58,13 @@ const Hero = () => {
               alt="hero"
               height={500}
               width={500}
-              src="/assests/profilepic.png"
+              src="/assets/profilepic.png"
             />
           </motion.div>
         </div>
       </div>
     </section>
   );
-}
+};
 
-// Export the component with dynamic import
-export default dynamic(() => Promise.resolve(Hero), { ssr: false });
+export default Hero;
